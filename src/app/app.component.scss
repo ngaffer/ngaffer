@@ -1,11 +1,12 @@
-@import '../assets/scss/app-variables';
-@import '../assets/scss/app-mixins';
+@import 'app-variables';
+@import 'app-mixins';
+@import 'app-bootstrap';
 
 h1 {
-  width: 97%;
-  font: 100% $font-stack;
+  width: 50%;
+  font: 40px $font-stack;
   .redbox {
-    background-color: #ff0000;
+    background-color: $gray-light;
     @include border-radius(10px);
   }
 }

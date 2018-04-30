@@ -23,6 +23,7 @@
       ],
       "stylePreprocessorOptions": {
         "includePaths": [
+          "../node_modules/bootstrap-sass/assets/stylesheets/",
           "./assets/scss/"
         ]
       },
