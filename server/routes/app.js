@@ -11,12 +11,12 @@ router.get('/test', function(req, res, next) {
 
 router.post('/test', function(req, ress, next) {
   let email = req.body.email;
-  let user = new User({
+  let user = {
     firstName: 'Natasha',
     lastName: 'Gaffer',
     password: 'testpass',
     email: email
-  });
+  };
   user.save();
   res.redirect('/');
 });
