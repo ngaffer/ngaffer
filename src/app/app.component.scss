@@ -1,0 +1,11 @@
+@import '../assets/scss/app-variables';
+@import '../assets/scss/app-mixins';
+
+h1 {
+  width: 97%;
+  font: 100% $font-stack;
+  .redbox {
+    background-color: #ff0000;
+    @include border-radius(10px);
+  }
+}
