@@ -1,12 +1,12 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
-import {ExperienceComponent} from './experience/experience.component';
+import {ExperiencesComponent} from './experiences.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ExperienceComponent,
+    component: ExperiencesComponent,
     pathMatch: 'full'
   }
 ];

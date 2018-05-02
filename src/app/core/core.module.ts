@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import { CoreRoutingModule } from './core-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ProjectService } from './services/project.service';
+import { ExperienceService } from './services/experience.service';
 
 @NgModule({
   imports: [
@@ -15,6 +17,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     RouterModule,
     HeaderComponent
   ],
-  declarations: [HeaderComponent, NotFoundComponent]
+  declarations: [HeaderComponent, NotFoundComponent],
+  providers: [ProjectService, ExperienceService]
 })
 export class CoreModule { }

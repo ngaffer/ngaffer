@@ -1,23 +1,29 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
+const path = require('path');
+
+var Experience = require('../../models/experience');
 
 // Connect
 mongoose.connect('mongodb://localhost:27017/ngaffer');
 
-router.get('/test', function(req, res, next) {
-  res.send('hello');
+router.get('/test', (req, res, next) => {
+  Experience.findOne({}, (err, doc) => {
+    if (err) {
+      return res.send('Error!');
+    }
+    res.sendFile('index.html', {title: doc});
+  });
 });
 
-router.post('/test', function(req, ress, next) {
-  let email = req.body.email;
-  let user = {
-    firstName: 'Natasha',
-    lastName: 'Gaffer',
-    password: 'testpass',
-    email: email
-  };
-  user.save();
+router.post('/test', (req, res, next) => {
+  let company = req.body.company;
+  let experience = new Experience({
+    title: 'developer',
+    company: company
+  });
+  experience.save(); // can call a callback function here err, result...
   res.redirect('/');
 });
 
