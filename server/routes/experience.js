@@ -6,11 +6,11 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/ngaffer');
 
 const experiences = [
-  { title: 'Developer', company: 'Target' },
-  { title: 'Engineer', company: 'Mischief' }
+  { title: 'Developer', company: 'Target', kind: 'experience' },
+  { title: 'Engineer', company: 'Mischief', kind: 'experience' }
 ];
 
-router.get('/experiences', (req, res) => {
+router.get('', (req, res) => {
   res.send(experiences);
 });
 

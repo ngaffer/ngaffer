@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
-// import {ExperienceService} from '../../core/services/experience.service';
+import {ExperienceService} from '../../core/services/experience.service';
 import {Experience} from '../../core/models/experience.model';
 
 @Component({
@@ -10,29 +10,23 @@ import {Experience} from '../../core/models/experience.model';
 })
 export class ExperienceListComponent implements OnInit {
 
+  experiences: Experience[];
 
-  experiences: Experience[] = [
-    new Experience('developer', 'another company', 'experience'),
-    new Experience('designer', 'Target Creative', 'experience')
-  ];
-
-  // public experience;
-
-  // constructor(private experienceService: ExperienceService) { }
+  constructor(private experienceService: ExperienceService) { }
 
   ngOnInit() {
-    // this.getExperiences();
+    this.getExperiences();
   }
 
-  // getExperiences() {
-  //   this.experienceService.getExperiences().subscribe(
-  //     // function which runs on success
-  //     data => { console.log(data) },
-  //     // function which runs on error
-  //     err => console.error(err),
-  //     // function which runs on completion
-  //     () => console.log('done loading experiences')
-  //   );
-  // }
+  getExperiences()  {
+    this.experienceService.getExperiences().subscribe(
+      // function which runs on success
+      data => { this.experiences = data; },
+      // function which runs on error
+      err => console.error(err),
+      // function which runs on completion
+      () => console.log('done loading experiences')
+    );
+  }
 
 }
