@@ -15,18 +15,19 @@ export class ExperienceListComponent implements OnInit {
   constructor(private experienceService: ExperienceService) { }
 
   ngOnInit() {
-    this.getExperiences();
+    this.listExperiences();
   }
 
-  getExperiences()  {
-    this.experienceService.getExperiences().subscribe(
-      // function which runs on success
-      data => { this.experiences = data; },
-      // function which runs on error
-      err => console.error(err),
-      // function which runs on completion
-      () => console.log('done loading experiences')
-    );
+  listExperiences()  {
+    this.experienceService.getExperiences()
+      .subscribe(
+        // function which runs on success
+        (experiences: Experience[]) => { this.experiences = experiences; },
+        // function which runs on error
+        err => console.error(err),
+        // function which runs on completion
+        () => console.log('done loading experiences')
+      );
   }
 
 }

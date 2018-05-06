@@ -15,9 +15,10 @@ app.use(bodyParser.urlencoded({ extended: false}));
 // Angular DIST output folder
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// API location
-app.use('/', appRoutes);
+// API location - list more specific routes first
 app.use('/experiences', experienceRoutes);
+app.use('/', appRoutes);
+
 
 // Send all other requests to the Angular app
 app.get('*', (req, res) => {
