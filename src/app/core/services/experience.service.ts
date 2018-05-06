@@ -24,7 +24,6 @@ export class ExperienceService {
     // The catchError() operator intercepts an Observable that failed and passes it to the error handler
     return this.http.get('http://localhost:3000/experiences')
       .map((response: Response) => {
-          console.log('experiences fetched...');
           console.log(response);
           const experiences = response.json().obj;
           let transformedExperiences: Experience[] = [];
@@ -32,8 +31,6 @@ export class ExperienceService {
             transformedExperiences.push(new Experience(experience.title, experience.company));
           }
           this.experiences = transformedExperiences;
-          console.log('this.exp..' + this.experiences);
-          console.log(transformedExperiences);
           return transformedExperiences;
         });
         //, catchError(this.handleError('getExperiences', []))
