@@ -1,28 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import 'app-bootstrap';
-@import 'app-variables';
-@import 'app-mixins';
+.button {
+  background: linear-gradient(#eee, #ccc);
+  border: 1px solid #999;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #888;
+  //@include border-radius(3px);
+  //@include box-shadow(white 0 1px 0 inset, rgba(black, 0.1) 0 1px 0 0);
+  color: #333;
+  cursor: pointer;
+  padding: 4px 10px 5px;
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700');
-
-body {
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
-.exp-titles {
-  text-transform: uppercase;
-
-  h3 {
-    color: #ff0000;
-    font-weight: 700;
-  }
-  h4 {
-    color: #ff0000;
-    font-weight: 400;
-  }
-  h5 {
-    font-weight: 400;
+  &:hover {
+    background: linear-gradient(#fff, #ddd);
+    color: #111;
   }
 }
-
