@@ -1,12 +1,3 @@
 @import 'app-variables';
 @import 'app-mixins';
 @import 'app-bootstrap';
-
-h1 {
-  width: 50%;
-  font: 40px $font-stack;
-  .redbox {
-    background-color: $gray-light;
-    @include border-radius(10px);
-  }
-}
