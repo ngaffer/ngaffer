@@ -1,0 +1,34 @@
+@import 'app-typography';
+
+.experience {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.experience__headlines {
+  text-transform: uppercase;
+  flex: 1 1 auto;
+
+  h3 {
+    color: #ff0000;
+    font-weight: $font-weight-bold;
+    margin: 0;
+  }
+  h4 {
+    color: #ff0000;
+    font-weight: $font-weight-normal;
+    margin: 0;
+  }
+  h5 {
+    font-weight: $font-weight-normal;
+    margin: 0;
+  }
+}
+
+.experience__description {
+  flex: 1 1 auto;
+}
+
+.experience__links {
+  flex: 0 1 auto;
+}
