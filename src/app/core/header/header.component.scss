@@ -1,0 +1,28 @@
+@import 'app-typography';
+
+.header {
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+}
+
+.header__brand {
+  text-transform: uppercase;
+}
+
+.header__subtitle {
+  color: $highlight-color;
+  font-weight: $font-weight-light;
+  display: block;
+  font-size: 16px;
+}
+
+.header__contact {
+  text-transform: uppercase;
+  font-weight: $font-weight-light;
+}
+
+.header__social {
+
+}
