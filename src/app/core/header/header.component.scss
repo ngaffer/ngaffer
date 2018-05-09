@@ -1,6 +1,9 @@
 @import 'app-typography';
 
 .header {
+  display: flex;
+  flex-flow: row nowrap;
+
   ul {
     list-style-type: none;
     padding: 0;
@@ -9,6 +12,7 @@
 
 .header__brand {
   text-transform: uppercase;
+  flex: 1 1 auto;
 }
 
 .header__subtitle {
@@ -21,8 +25,9 @@
 .header__contact {
   text-transform: uppercase;
   font-weight: $font-weight-light;
+  flex: 0 1 auto;
 }
 
 .header__social {
-
+  flex: 0 1 auto;
 }
