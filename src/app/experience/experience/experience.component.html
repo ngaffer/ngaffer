@@ -1,9 +1,11 @@
-<div class="experience">
+<section class="experience">
   <div class="experience__headlines">
-      <h3>{{ experience.title }}</h3>
-      <h3>Subtitle</h3>
-      <h4>{{ experience.company }}</h4>
-      <h5>Duration</h5>
+      <h3>
+        <span class="experience__title">{{ experience.title }}</span><br>
+        <span class="experience__subtitle">Subtitle</span><br>
+        <span class="experience__company">{{ experience.company }}</span>
+      </h3>
+      <p class="experience_duration">Duration</p>
   </div>
   <div class="experience__description">
     <ul class="experience__list">
@@ -22,4 +24,4 @@
       </a>
     </div>
   </div>
-</div>
+</section>
