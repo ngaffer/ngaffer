@@ -7,22 +7,25 @@
 
 .experience__headlines {
   text-transform: uppercase;
-  flex: 0 1 auto;
+  flex: 0 1 500px;
+}
 
-  h3 {
-    color: #ff0000;
-    font-weight: $font-weight-bold;
-    margin: 0;
-  }
-  h4 {
-    color: #ff0000;
-    font-weight: $font-weight-normal;
-    margin: 0;
-  }
-  h5 {
-    font-weight: $font-weight-normal;
-    margin: 0;
-  }
+.experience__title,
+.experience__subtitle {
+  color: #ff0000;
+  font-weight: $font-weight-bold;
+  margin: 0;
+}
+
+.experience__company {
+  color: #ff0000;
+  font-weight: $font-weight-normal;
+  margin: 0;
+}
+
+.experience__duration {
+  font-weight: $font-weight-normal;
+  margin: 0;
 }
 
 .experience__description {
